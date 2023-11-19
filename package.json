@@ -1,0 +1,10 @@
+{
+  "name": "github-clone",
+  "version": "1.0.0",
+  "description": "GitHub Clone - for Education purpose only",
+  "scripts": {
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [],
+  "author": "Shubham-Lal"
+}
