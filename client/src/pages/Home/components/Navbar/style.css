@@ -291,7 +291,6 @@
     right: 0;
     z-index: 1;
     width: calc(100% - 16px);
-    /* height: calc(100vh - 65px - 23px); */
     background: white;
     border-radius: 6px 0 0 6px;
     padding: 16px;
@@ -363,12 +362,17 @@
     animation: popup 200ms 0s ease forwards;
 }
 
-.sidebar__links-container ul li {
+.sidebar__links-container .sidebar__links-top {
+    margin-bottom: 24px;
+}
+
+.sidebar__links-container .sidebar__links-top li {
     height: 53.5px;
     display: flex;
     gap: 16px;
     align-items: center;
     padding: 8px 0;
+    cursor: pointer;
 }
 
 .sidebar__link-info {
@@ -377,6 +381,14 @@
     justify-content: center;
     flex-direction: column;
     margin-bottom: 2px;
+}
+
+.sidebar__link-info:hover div:first-child  {
+    color: #0969da;
+}
+
+.sidebar__link-info:hover div:last-child  {
+    color: #0969da;
 }
 
 .sidebar__link-info div:first-child {
@@ -395,6 +407,55 @@
     font-weight: 400;
     font-stretch: 90%;
     color: #57606a;
+}
+
+.sidebar__links-bottom div {
+    color: #1F2328;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 90%;
+    margin: 4px 0;
+}
+
+.sidebar__links-bottom ul {
+    height: 136.25px;
+}
+
+.sidebar__links-bottom ul li {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar__links-bottom ul li {
+    color: #656d76;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    padding: 8px 0;
+}
+
+.sidebar__links-bottom ul li p {
+    color: #656d76;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    cursor: pointer;
+}
+
+.sidebar__links-bottom ul li img {
+    visibility: hidden;
+}
+
+.sidebar__links-bottom ul li:hover p {
+    color: #0969da;
+}
+
+.sidebar__links-bottom ul li:hover img {
+    transform: translateX(3px);
+    visibility: visible;
+    transition: all 200ms;
 }
 
 .sidebar__bottom {
@@ -429,17 +490,6 @@
     font-size: 16px;
     font-weight: 600;
     font-stretch: 90%;
-}
-
-@media (min-width: 544px) {
-    .navbar__menu-medium {
-        padding: 16px 40px;
-    }
-
-    .sidebar__container {
-        width: 320px;
-        animation: popup 200ms 0s ease forwards;
-    }
 }
 
 .search__modal {
@@ -504,6 +554,17 @@
     color: #0969da;
     font-size: 12px;
     font-weight: 400;
+}
+
+@media (min-width: 544px) {
+    .navbar__menu-medium {
+        padding: 16px 40px;
+    }
+
+    .sidebar__container {
+        width: 320px;
+        animation: popup 200ms 0s ease forwards;
+    }
 }
 
 @media (max-width: 1011px) {

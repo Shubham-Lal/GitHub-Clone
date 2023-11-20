@@ -88,7 +88,7 @@ const Navbar = () => {
                     <div
                         className='sidebar__container'
                         style={{
-                            height: `${height}px`,
+                            height: `${height - 88}px`,
                             opacity: isReady ? 1 : 0,
                             transition: 'opacity 0.5s linear'
                         }}
@@ -105,7 +105,7 @@ const Navbar = () => {
                                 </li>
                                 {showProduct && (
                                     <div className='sidebar__links-container'>
-                                        <ul>
+                                        <ul className='sidebar__links-top'>
                                             <li>
                                                 <img src='/images/actions.svg' alt='Action' />
                                                 <div className='sidebar__link-info'>
@@ -163,6 +163,24 @@ const Navbar = () => {
                                                 </div>
                                             </li>
                                         </ul>
+                                        <div className='sidebar__links-bottom'>
+                                            <div>Explore</div>
+                                            <ul>
+                                                <li><p>All features</p></li>
+                                                <li>
+                                                    <p>Documentation</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                                <li>
+                                                    <p>GitHub Skills</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                                <li>
+                                                    <p>Blog</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 )}
                                 <li className='sidebar__top-link' onClick={() => {

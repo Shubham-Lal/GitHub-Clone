@@ -6,8 +6,7 @@ const useWindowHeight = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setHeight(window.innerHeight - 88);
-            // setHeight(window.innerHeight);
+            setHeight(window.innerHeight);
             setIsReady(true);
         };
 
