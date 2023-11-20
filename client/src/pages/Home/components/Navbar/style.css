@@ -133,6 +133,7 @@
     padding-left: 8px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .navbar__search-icon {
@@ -346,13 +347,15 @@
 }
 
 .sidebar__top-link .arrow-right.animate-open {
+    padding-top: 0;
+    padding-left: 4px;
     rotate: 0deg;
-    transition: 200ms;
+    transition: all 200ms;
 }
 
 .sidebar__top-link .arrow-right.animate-close {
     rotate: -90deg;
-    transition: 200ms;
+    transition: all 200ms;
 }
 
 .sidebar__top-link,
@@ -509,6 +512,69 @@
     transform: translateX(3px);
     visibility: visible;
     transition: all 200ms;
+}
+
+.source__container {
+    padding: 8px 0;
+    animation: popup 200ms 0s ease forwards;
+}
+
+.source__top {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.source__top ul li {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.source__top ul li p:first-child {
+    color: #1F2328;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    font-stretch: 90%;
+}
+
+.source__top ul li p:last-child {
+    color: #656d76;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    height: 17.5px;
+    display: flex;
+    align-items: center;
+}
+
+.source__top ul li:hover p {
+    color: #0969da;
+}
+
+.source__bottom p {
+    color: #1F2328;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 90%;
+    margin: 4px 0;
+}
+
+.source__bottom ul li {
+    color: #656d76;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.source__bottom ul li:hover {
+    color: #0969da;
 }
 
 .sidebar__bottom {
