@@ -192,7 +192,60 @@ const Navbar = () => {
                                     <img className={`arrow-right ${showSolutions ? "animate-open" : "animate-close"}`} src='/images/arrow-sidebar.svg' alt='arrow' />
                                 </li>
                                 {showSolutions && (
-                                    <div></div>
+                                    <div className='solutions__container'>
+                                        <div className='solutions__wrapper'>
+                                            <div>For</div>
+                                            <ul>
+                                                <li>
+                                                    <p>Enterprise</p>
+                                                </li>
+                                                <li>
+                                                    <p>Teams</p>
+                                                </li>
+                                                <li>
+                                                    <p>Startups</p>
+                                                </li>
+                                                <li style={{ height: '34.25px' }}>
+                                                    <p>Education</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className='solutions__wrapper'>
+                                            <div>By Solution</div>
+                                            <ul>
+                                                <li><p>CI/CD & Automation</p></li>
+                                                <li style={{ height: '34.25px' }}>
+                                                    <p>DevOps</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                                <li style={{ height: '34.25px' }}>
+                                                    <p>DevSecOps</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className='solutions__wrapper' style={{ paddingBottom: 0, marginBottom: 0, borderBottom: 'none' }}>
+                                            <div>Resources</div>
+                                            <ul>
+                                                <li style={{ height: '34.25px' }}>
+                                                    <p>Learning Pathways</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                                <li style={{ height: '34.25px' }}>
+                                                    <p>White papers, Ebooks, Webinars</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                                <li>
+                                                    <p>Customer Stories</p>
+                                                </li>
+                                                <li style={{ height: '34.25px' }}>
+                                                    <p>Partners</p>
+                                                    <img src='/images/open-link.svg' alt='Open Link' />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 )}
                                 <li className='sidebar__top-link' onClick={() => {
                                     setShowProduct(false);

@@ -301,6 +301,10 @@
     animation: popup 200ms 0s ease forwards;
 }
 
+.sidebar__top {
+    margin-bottom: 16px;
+}
+
 .sidebar__top .sidebar__top-wrapper {
     padding: 0 16px;
     background-color: white;
@@ -383,11 +387,11 @@
     margin-bottom: 2px;
 }
 
-.sidebar__link-info:hover div:first-child  {
+.sidebar__link-info:hover div:first-child {
     color: #0969da;
 }
 
-.sidebar__link-info:hover div:last-child  {
+.sidebar__link-info:hover div:last-child {
     color: #0969da;
 }
 
@@ -453,6 +457,55 @@
 }
 
 .sidebar__links-bottom ul li:hover img {
+    transform: translateX(3px);
+    visibility: visible;
+    transition: all 200ms;
+}
+
+.solutions__container {
+    padding: 8px 0;
+    animation: popup 200ms 0s ease forwards;
+}
+
+.solutions__wrapper {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.solutions__wrapper div {
+    color: #1F2328;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-stretch: 90%;
+    margin: 4px 0;
+}
+
+.solutions__wrapper ul li {
+    display: flex;
+    align-items: center;
+}
+
+.solutions__wrapper ul li p {
+    color: #656d76;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.25;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.solutions__wrapper ul li img {
+    visibility: hidden;
+}
+
+.solutions__wrapper ul li:hover p {
+    color: #0969da;
+}
+
+.solutions__wrapper ul li:hover img {
     transform: translateX(3px);
     visibility: visible;
     transition: all 200ms;
