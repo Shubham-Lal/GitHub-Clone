@@ -1,10 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
+import useWindowHeight from '../../../../hooks/useWindowHeight'
 
 const Navbar = () => {
+    const { height, isReady } = useWindowHeight();
+
     const [openSearch, setOpenSearch] = useState(false);
     const [openSidebar, setOpenSidebar] = useState(false);
+
+    const [showProduct, setShowProduct] = useState(false);
+    const [showSolutions, setShowSolutions] = useState(false);
+    const [showOpenSrc, setShowOpenSrc] = useState(false);
 
     const [searchInput, setSearchInput] = useState("");
 
@@ -78,22 +85,109 @@ const Navbar = () => {
                 </div>
 
                 {openSidebar && (
-                    <div className='sidebar__container'>
+                    <div
+                        className='sidebar__container'
+                        style={{
+                            height: `${height}px`,
+                            opacity: isReady ? 1 : 0,
+                            transition: 'opacity 0.5s linear'
+                        }}
+                    >
                         <div className='sidebar__top'>
-                            <ul>
-                                <li>
+                            <ul className='sidebar__top-wrapper'>
+                                <li className='sidebar__top-link' onClick={() => {
+                                    setShowProduct(!showProduct);
+                                    setShowSolutions(false);
+                                    setShowOpenSrc(false);
+                                }}>
                                     <span>Product</span>
-                                    <img src='/images/arrow-sidebar.svg' alt='arrow' />
+                                    <img className={`arrow-right ${showProduct ? "animate-open" : "animate-close"}`} src='/images/arrow-sidebar.svg' alt='arrow' />
                                 </li>
-                                <li>
+                                {showProduct && (
+                                    <div className='sidebar__links-container'>
+                                        <ul>
+                                            <li>
+                                                <img src='/images/actions.svg' alt='Action' />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Actions</div>
+                                                    <div>Automate any workflow</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/packages.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Packages</div>
+                                                    <div>Host and manage packages</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/security.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Security</div>
+                                                    <div>Find and fix vulnerabilities</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/codespaces.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Codespaces</div>
+                                                    <div>Instant dev environments</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/copilot.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Copilot</div>
+                                                    <div>Write better code with AI</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/code-review.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Code review</div>
+                                                    <div>Manage code changes</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/issues.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Issues</div>
+                                                    <div>Plan and track work</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src='/images/discussions.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                                <div className='sidebar__link-info'>
+                                                    <div>Discussions</div>
+                                                    <div>Collaborate outside of code</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                )}
+                                <li className='sidebar__top-link' onClick={() => {
+                                    setShowProduct(false);
+                                    setShowSolutions(!showSolutions);
+                                    setShowOpenSrc(false);
+                                }}>
                                     <span>Solutions</span>
-                                    <img src='/images/arrow-sidebar.svg' alt='arrow' />
+                                    <img className={`arrow-right ${showSolutions ? "animate-open" : "animate-close"}`} src='/images/arrow-sidebar.svg' alt='arrow' />
                                 </li>
-                                <li>
+                                {showSolutions && (
+                                    <div></div>
+                                )}
+                                <li className='sidebar__top-link' onClick={() => {
+                                    setShowProduct(false);
+                                    setShowSolutions(false);
+                                    setShowOpenSrc(!showOpenSrc);
+                                }}>
                                     <span>Open Source</span>
-                                    <img src='/images/arrow-sidebar.svg' alt='arrow' />
+                                    <img className={`arrow-right ${showOpenSrc ? "animate-open" : "animate-close"}`} src='/images/arrow-sidebar.svg' alt='arrow' />
                                 </li>
-                                <li>
+                                {showOpenSrc && (
+                                    <div></div>
+                                )}
+                                <li className='sidebar__top-link'>
                                     <span>Pricing</span>
                                 </li>
                             </ul>
@@ -109,7 +203,9 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className='sidebar__signin'>
-                                Sign in
+                                <Link to="/">
+                                    Sign in
+                                </Link>
                             </div>
                         </div>
                     </div>
