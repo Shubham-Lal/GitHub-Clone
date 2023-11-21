@@ -137,6 +137,25 @@
     padding: 24px;
 }
 
+.source__container-navbar .source__container {
+    padding: 0;
+    animation: none;
+}
+
+.source__container-navbar .source__container .source__top ul li {
+    height: 53.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.source__container-navbar .source__container .source__bottom ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .navbar__menu-links {
     color: white;
 }

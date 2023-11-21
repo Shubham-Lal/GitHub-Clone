@@ -202,7 +202,36 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                         <span>Open Source</span>
                         <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links third'>
-                            Third
+                            <div className='source__container-navbar'>
+                                <div className='source__container'>
+                                    <div className='source__top'>
+                                        <ul>
+                                            <li>
+                                                <div>
+                                                    <p>GitHub Sponsors</p>
+                                                    <p>Fund open source developers</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className='source__top'>
+                                        <ul>
+                                            <li>
+                                                <p>The ReadME Project</p>
+                                                <p>GitHub community articles</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className='source__bottom'>
+                                        <p>Repositories</p>
+                                        <ul>
+                                            <li>Topics</li>
+                                            <li>Trending</li>
+                                            <li>Collections</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>
