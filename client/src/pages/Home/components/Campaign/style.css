@@ -1,0 +1,30 @@
+.campaign__container {
+    position: relative;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.campaign__image-medium {
+    width: 100%;
+    height: auto;
+    margin-bottom: calc(-1 * 16px);
+}
+
+.campaign__image-large {
+    display: none;
+    position: absolute;
+    width: min(1118px, max(100vh, 100vw));
+    left: 67%;
+    height: auto;
+}
+
+@media (min-width: 544px) {
+    .campaign__image-medium {
+        display: none;
+    }
+
+    .campaign__image-large {
+        display: block;
+    }
+}
