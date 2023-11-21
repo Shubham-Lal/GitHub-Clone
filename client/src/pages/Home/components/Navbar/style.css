@@ -73,6 +73,7 @@
 
 .product__left .sidebar__links-container {
     padding: 0;
+    animation: none;
 }
 
 .product__left .sidebar__links-container ul {
@@ -114,6 +115,21 @@
 .navbar__menu-links.second {
     width: 300px;
     padding: 24px;
+}
+
+.solutions__container-navbar .solutions__container  {
+    padding: 0;
+    animation: none;
+}
+
+.solutions__container-navbar .solutions__container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.solutions__container-navbar .solutions__container ul li {
+    padding: 0;
 }
 
 .navbar__menu-links.third {

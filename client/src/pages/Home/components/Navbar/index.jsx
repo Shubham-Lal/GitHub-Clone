@@ -140,7 +140,62 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                         <span>Solutions</span>
                         <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links second'>
-                            Second
+                            <div className='solutions__container-navbar'>
+                                <div className='solutions__container'>
+                                    <div className='solutions__wrapper'>
+                                        <div>For</div>
+                                        <ul>
+                                            <li>
+                                                <p>Enterprise</p>
+                                            </li>
+                                            <li>
+                                                <p>Teams</p>
+                                            </li>
+                                            <li>
+                                                <p>Startups</p>
+                                            </li>
+                                            <li style={{ height: '34.25px' }}>
+                                                <p>Education</p>
+                                                <img src='/images/open-link.svg' alt='Open Link' />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className='solutions__wrapper'>
+                                        <div>By Solution</div>
+                                        <ul>
+                                            <li><p>CI/CD & Automation</p></li>
+                                            <li style={{ height: '34.25px' }}>
+                                                <p>DevOps</p>
+                                                <img src='/images/open-link.svg' alt='Open Link' />
+                                            </li>
+                                            <li style={{ height: '34.25px' }}>
+                                                <p>DevSecOps</p>
+                                                <img src='/images/open-link.svg' alt='Open Link' />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className='solutions__wrapper' style={{ paddingBottom: 0, marginBottom: 0, borderBottom: 'none' }}>
+                                        <div>Resources</div>
+                                        <ul>
+                                            <li>
+                                                <p style={{ height: '34.25px' }}>Learning Pathways</p>
+                                                <img src='/images/open-link.svg' alt='Open Link' />
+                                            </li>
+                                            <li>
+                                                <p style={{ height: '34.25px' }}>White papers, Ebooks, Webinars</p>
+                                                <img src='/images/open-link.svg' alt='Open Link' />
+                                            </li>
+                                            <li>
+                                                <p>Customer Stories</p>
+                                            </li>
+                                            <li>
+                                                <p style={{ height: '34.25px' }}>Partners</p>
+                                                <img src='/images/open-link.svg' alt='Open Link' />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>
