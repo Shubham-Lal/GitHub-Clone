@@ -48,21 +48,104 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                 <ul>
                     <li>
                         <span>Product</span>
-                        <img src='/images/arrow.svg' alt='arrow' />
+                        <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links first'>
-                            First
+                            <div className='product__left'>
+                                <div className='sidebar__links-container'>
+                                    <ul className='sidebar__links-top'>
+                                        <li>
+                                            <img src='/images/actions.svg' alt='Action' />
+                                            <div className='sidebar__link-info'>
+                                                <div>Actions</div>
+                                                <div>Automate any workflow</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/packages.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div className='sidebar__link-info'>
+                                                <div>Packages</div>
+                                                <div>Host and manage packages</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/security.svg' alt='Packages' />
+                                            <div className='sidebar__link-info'>
+                                                <div>Security</div>
+                                                <div>Find and fix vulnerabilities</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/codespaces.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div className='sidebar__link-info'>
+                                                <div>Codespaces</div>
+                                                <div>Instant dev environments</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/copilot.svg' alt='Packages' />
+                                            <div className='sidebar__link-info'>
+                                                <div>Copilot</div>
+                                                <div>Write better code with AI</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/code-review.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div className='sidebar__link-info'>
+                                                <div>Code review</div>
+                                                <div>Manage code changes</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/issues.svg' alt='Packages' />
+                                            <div className='sidebar__link-info'>
+                                                <div>Issues</div>
+                                                <div>Plan and track work</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src='/images/discussions.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div className='sidebar__link-info'>
+                                                <div>Discussions</div>
+                                                <div>Collaborate outside of code</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='product__right'>
+                                <div className='sidebar__links-bottom'>
+                                    <div>Explore</div>
+                                    <ul>
+                                        <li style={{ height: '33.5px' }}>
+                                            <p>All features</p>
+                                        </li>
+                                        <li style={{ height: '34.25px' }}>
+                                            <p>Documentation</p>
+                                            <img src='/images/open-link.svg' alt='Open Link' />
+                                        </li>
+                                        <li style={{ height: '34.25px' }}>
+                                            <p style={{ marginBottom: '1px' }}>GitHub Skills</p>
+                                            <img src='/images/open-link.svg' alt='Open Link' />
+                                        </li>
+                                        <li style={{ height: '34.25px' }}>
+                                            <p style={{ marginBottom: '1px' }}>Blog</p>
+                                            <img src='/images/open-link.svg' alt='Open Link' />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <span>Solutions</span>
-                        <img src='/images/arrow.svg' alt='arrow' />
+                        <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links second'>
                             Second
                         </div>
                     </li>
                     <li>
                         <span>Open Source</span>
-                        <img src='/images/arrow.svg' alt='arrow' />
+                        <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links third'>
                             Third
                         </div>
