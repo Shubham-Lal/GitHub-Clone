@@ -54,56 +54,72 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                                 <div className='sidebar__links-container'>
                                     <ul className='sidebar__links-top'>
                                         <li>
-                                            <img src='/images/actions.svg' alt='Action' />
+                                            <div style={{ width: '24px', height: '24px' }}>
+                                                <img src='/images/actions.svg' alt='Action' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Actions</div>
                                                 <div>Automate any workflow</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/packages.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/packages.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Packages</div>
                                                 <div>Host and manage packages</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/security.svg' alt='Packages' />
+                                            <div style={{ width: '24px', height: '24px' }}>
+                                                <img src='/images/security.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Security</div>
                                                 <div>Find and fix vulnerabilities</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/codespaces.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/codespaces.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Codespaces</div>
                                                 <div>Instant dev environments</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/copilot.svg' alt='Packages' />
+                                            <div style={{ width: '24px', height: '24px' }}>
+                                                <img src='/images/copilot.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Copilot</div>
                                                 <div>Write better code with AI</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/code-review.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/code-review.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Code review</div>
                                                 <div>Manage code changes</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/issues.svg' alt='Packages' />
+                                            <div style={{ width: '24px', height: '24px' }}>
+                                                <img src='/images/issues.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Issues</div>
                                                 <div>Plan and track work</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/discussions.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/discussions.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Discussions</div>
                                                 <div>Collaborate outside of code</div>
@@ -310,56 +326,72 @@ const NavbarMedium = ({ openSearch, setOpenSearch }) => {
                                 <div className='sidebar__links-container'>
                                     <ul className='sidebar__links-top'>
                                         <li>
-                                            <img src='/images/actions.svg' alt='Action' />
+                                            <div style={{ width: '24px', height: '24px' }}>
+                                                <img src='/images/actions.svg' alt='Action' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Actions</div>
                                                 <div>Automate any workflow</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/packages.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/packages.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Packages</div>
                                                 <div>Host and manage packages</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/security.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/security.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Security</div>
                                                 <div>Find and fix vulnerabilities</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/codespaces.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/codespaces.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Codespaces</div>
                                                 <div>Instant dev environments</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/copilot.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/copilot.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Copilot</div>
                                                 <div>Write better code with AI</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/code-review.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/code-review.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Code review</div>
                                                 <div>Manage code changes</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/issues.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/issues.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Issues</div>
                                                 <div>Plan and track work</div>
                                             </div>
                                         </li>
                                         <li>
-                                            <img src='/images/discussions.svg' alt='Packages' style={{ marginBottom: '1px' }} />
+                                            <div style={{ width: '24px', height: '24px', marginBottom: '1px' }}>
+                                                <img src='/images/discussions.svg' alt='Packages' />
+                                            </div>
                                             <div className='sidebar__link-info'>
                                                 <div>Discussions</div>
                                                 <div>Collaborate outside of code</div>

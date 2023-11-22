@@ -1,4 +1,5 @@
 import React from 'react'
+import Line from '../../../../components/Line'
 import './style.css'
 
 const Campaign = () => {
@@ -15,17 +16,17 @@ const Campaign = () => {
                             <div className='circle__container'>
                                 <div className='circle__dot' />
                             </div>
-                            <div className='line first' />
+                            <Line background='one' />
                             <div className='bracket__container'>
                                 <div className='bracket__wrapper'>
                                     <img src='/images/bracket.svg' alt='Bracket' />
                                     <div className='bracket__shadow' />
                                 </div>
                             </div>
-                            <div className='line second' />
+                            <Line background='two' />
                         </div>
                         <div className='campaign__right'>
-
+                            
                         </div>
                     </div>
                 </div>

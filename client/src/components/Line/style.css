@@ -1,0 +1,56 @@
+.line {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.line.one {
+    background: linear-gradient(transparent, #7C72FF 30%);
+}
+
+.line.two {
+    background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950);
+}
+
+.line.three {
+    background: linear-gradient(rgb(63, 185, 80), rgb(46, 160, 67), transparent);
+}
+
+.line.four {
+    background: linear-gradient(transparent, rgb(63, 185, 80), rgb(63, 185, 80), transparent);
+}
+
+.line.five {
+    background: linear-gradient(transparent, #33B3AE 40%);
+}
+
+.line.six {
+    background: linear-gradient(rgb(51, 179, 174) 40%, transparent);
+}
+
+.line.seven {
+    background: linear-gradient(transparent, rgb(51, 179, 174), rgb(51, 179, 174), transparent);
+}
+
+.line.eight {
+    background: linear-gradient(transparent, #F778BA 40%);
+}
+
+.line.nine {
+    background: linear-gradient(rgb(247, 120, 186) 40%, transparent);
+}
+
+.line.ten {
+    background: linear-gradient(transparent, #F778BA, #F778BA, transparent);
+}
+
+.line.eleven {
+    background: linear-gradient(transparent, rgb(102, 57, 186) 10%, rgb(163, 113, 247), rgb(210, 168, 255));
+}
+
+@media (min-width: 768px) {
+    .line {
+        width: 3px;
+    }
+}

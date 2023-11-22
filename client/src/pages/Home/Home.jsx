@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Campaign from './components/Campaign';
+import Footer from './components/Footer';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <main style={{ overflowX: 'clip' }}>
                 <Campaign />
             </main>
+            <Footer />
         </>
     )
 }
