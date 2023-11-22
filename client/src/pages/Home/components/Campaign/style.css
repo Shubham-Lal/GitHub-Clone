@@ -1,6 +1,8 @@
-.campaign__container {
+.campaign__image {
     position: relative;
+    z-index: -1;
     max-width: 1280px;
+    height: fit-content;
     margin-right: auto;
     margin-left: auto;
 }
@@ -8,15 +10,95 @@
 .campaign__image-medium {
     width: 100%;
     height: auto;
-    margin-bottom: calc(-1 * 16px);
+    margin-bottom: calc(-1 * 14px);
 }
 
 .campaign__image-large {
     display: none;
+    z-index: -1;
     position: absolute;
     width: min(1118px, max(100vh, 100vw));
     left: 67%;
     height: auto;
+}
+
+.campaign__container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.campaign__wrapper {
+    display: flex;
+    padding-top: 16px;
+}
+
+.campaign__left {
+    display: flex;
+    flex-direction: column;
+    width: 8.33333333%;
+}
+
+.circle__container {
+    margin: 0 auto;
+}
+
+.circle__dot {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.line {
+    width: 2px;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.line.first {
+    /* ************************************************** */
+    height: 32.4vh;
+    /* ************************************************** */
+    background: linear-gradient(transparent, #7C72FF 30%);
+}
+
+.bracket__container {
+    margin: 16px auto;
+}
+
+.bracket__wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.bracket__shadow {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #7C72FF;
+    filter: blur(18px);
+}
+
+.line.second {
+    /* ************************************************** */
+    height: 32.4vh;
+    /* ************************************************** */
+    background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950);
+}
+
+.vertical-space {
+    margin-bottom: 8px;
+}
+
+.campaign__right {
+    padding-left: 8px;
+    margin-top: calc(-1 * 24px);
+    width: 91.66666663%;
 }
 
 @media (min-width: 544px) {
@@ -26,5 +108,33 @@
 
     .campaign__image-large {
         display: block;
+    }
+
+    .vertical-space {
+        margin-bottom: 40px;
+    }
+
+    .campaign__container {
+        padding-top: 64px;
+    }
+
+    .campaign__wrapper {
+        padding-top: 80px;
+    }
+
+    .campaign__right {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .line {
+        width: 3px;
+    }
+}
+
+@media (min-width: 1012px) {
+    .campaign__container {
+        padding-top: 128px;
     }
 }
