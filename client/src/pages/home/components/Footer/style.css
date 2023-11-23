@@ -1,11 +1,9 @@
-.footer__container {
-    padding-top: 40px;
-}
-
 .footer__top-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .footer__top-wrapper {
@@ -22,6 +20,7 @@
 
 .newsletter__container h2 {
     margin-top: 25px;
+    color: white;
     font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
     font-weight: 600;
@@ -137,7 +136,8 @@
     }
 
     .footer__top-container {
-        padding: 0 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .footer__bottom-wrapper {
@@ -187,7 +187,8 @@
     }
 
     .footer__top-container {
-        padding: 0 16px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .footer__bottom-wrapper {

@@ -10,7 +10,7 @@ const Navbar = () => {
     const [searchInput, setSearchInput] = useState("");
 
     return (
-        <header>
+        <header id='header'>
             <NavbarLarge openSearch={openSearch} setOpenSearch={setOpenSearch} />
             <NavbarMedium openSearch={openSearch} setOpenSearch={setOpenSearch} />
 
@@ -265,7 +265,7 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                         <img src='/images/slash.svg' alt='slash' />
                     </div>
                 </div>
-                <Link className='navbar__signin'>
+                <Link to='/login' className='navbar__signin'>
                     Sign in
                 </Link>
                 <Link className='navbar__signup'>
@@ -536,7 +536,7 @@ const NavbarMedium = ({ openSearch, setOpenSearch }) => {
                             </div>
                         </div>
                         <div className='sidebar__signin'>
-                            <Link to="/">
+                            <Link to="/login">
                                 Sign in
                             </Link>
                         </div>

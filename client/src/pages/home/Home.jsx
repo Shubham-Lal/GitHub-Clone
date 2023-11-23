@@ -7,10 +7,12 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <main style={{ overflowX: 'clip' }}>
+            <main style={{ background: '#0d1117', overflowX: 'clip' }}>
                 <Campaign />
             </main>
-            <Footer />
+            <footer style={{ background: '#0d1117' }}>
+                <Footer />
+            </footer>
         </>
     )
 }

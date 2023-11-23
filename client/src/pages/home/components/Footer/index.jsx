@@ -5,10 +5,10 @@ import './style.css'
 
 const Footer = () => {
     return (
-        <footer className='footer__container'>
+        <>
             <FooterTop />
             <FooterBottom />
-        </footer>
+        </>
     )
 }
 

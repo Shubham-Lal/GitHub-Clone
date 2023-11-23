@@ -2,14 +2,17 @@
     font-family: 'Mona Sans';
     src: url('/fonts/Mona-Sans.ttf');
 }
+
 @font-face {
     font-family: 'Mona Sans Bold';
     src: url('/fonts/MonaSans-Bold.ttf');
 }
+
 @font-face {
     font-family: 'Mona Sans Condensed Bold';
     src: url('/fonts/MonaSansCondensed-Bold.ttf');
 }
+
 @font-face {
     font-family: 'Liberation Mono';
     src: url('/fonts/LiberationMono.ttf');
@@ -24,10 +27,5 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Mona Sans', sans-serif;
-    color: white;
     -webkit-tap-highlight-color: transparent;
-}
-
-body {
-    background: #0d1117;
 }

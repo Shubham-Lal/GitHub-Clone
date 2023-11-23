@@ -1,6 +1,6 @@
 .campaign__image {
     position: relative;
-    z-index: -1;
+    z-index: 1;
     max-width: 1280px;
     height: fit-content;
     margin-right: auto;

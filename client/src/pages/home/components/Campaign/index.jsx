@@ -26,7 +26,7 @@ const Campaign = () => {
                             <Line background='two' />
                         </div>
                         <div className='campaign__right'>
-                            
+
                         </div>
                     </div>
                 </div>
