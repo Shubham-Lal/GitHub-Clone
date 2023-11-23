@@ -10,6 +10,10 @@
     font-family: 'Mona Sans Condensed Bold';
     src: url('/fonts/MonaSansCondensed-Bold.ttf');
 }
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('/fonts/LiberationMono.ttf');
+}
 
 * {
     box-sizing: border-box;
