@@ -47,7 +47,7 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                 </Link>
                 <ul>
                     <li>
-                        <span>Product</span>
+                        <p>Product</p>
                         <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links first'>
                             <div className='product__left'>
@@ -153,7 +153,7 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                         </div>
                     </li>
                     <li>
-                        <span>Solutions</span>
+                        <p>Solutions</p>
                         <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links second'>
                             <div className='solutions__container-navbar'>
@@ -215,7 +215,7 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                         </div>
                     </li>
                     <li>
-                        <span>Open Source</span>
+                        <p>Open Source</p>
                         <img className='down-arrow' src='/images/arrow.svg' alt='arrow' />
                         <div className='navbar__menu-links third'>
                             <div className='source__container-navbar'>
@@ -251,7 +251,7 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                         </div>
                     </li>
                     <li>
-                        <span>Pricing</span>
+                        <p>Pricing</p>
                     </li>
                 </ul>
             </div>

@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Noto Sans';
+    src: url('/fonts/NotoSans.ttf');
+}
+
+@font-face {
     font-family: 'Mona Sans Bold';
     src: url('/fonts/MonaSans-Bold.ttf');
 }
@@ -26,6 +31,6 @@
     border: 0;
     list-style: none;
     text-decoration: none;
-    font-family: 'Mona Sans', sans-serif;
+    font-family: 'Noto Sans', 'Mona Sans', sans-serif;
     -webkit-tap-highlight-color: transparent;
 }

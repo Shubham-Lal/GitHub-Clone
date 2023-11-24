@@ -19,4 +19,5 @@ export default {
     "Diamond": "https://github.githubassets.com/assets/footer-diamond-ed642fc95144.png",
     "Orb": "https://github.githubassets.com/assets/footer-orb-a0438104a7a2.png",
     "Blur": "https://github.githubassets.com/assets/footer-blur-8bc8e1f23df6.png",
+    "Glow": "https://github.githubassets.com/assets/hero-glow-f6eed469bca2.svg"
 }
