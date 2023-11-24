@@ -145,7 +145,7 @@
     border: 1px solid rgba(222, 167, 44, 0.44);
     border-radius: 6px;
     background-image: linear-gradient(#fff8c5, #fff8c5);
-    display: flex;
+    display: none;
 }
 
 .warn__image {
@@ -367,4 +367,10 @@
 
 .message__container.warn svg {
     fill: #9a6700;
+}
+
+@media (min-width: 544px) {
+    .warn_message {
+        display: flex;
+    }
 }
