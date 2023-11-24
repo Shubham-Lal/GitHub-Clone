@@ -1,0 +1,56 @@
+#header-signup {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 16px 0;
+}
+
+.header__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.signin__container {
+    margin-top: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.signin__container span {
+    margin-right: 8px;
+    color: #8193b2;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.signin__container a {
+    color: white;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.signin__container a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 544px) {
+    .header__container {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .signin__container {
+        margin-top: 0;
+    }
+}

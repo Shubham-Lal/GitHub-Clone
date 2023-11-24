@@ -10,7 +10,7 @@ const Navbar = () => {
     const [searchInput, setSearchInput] = useState("");
 
     return (
-        <header id='header'>
+        <header id='header-home'>
             <NavbarLarge openSearch={openSearch} setOpenSearch={setOpenSearch} />
             <NavbarMedium openSearch={openSearch} setOpenSearch={setOpenSearch} />
 
@@ -268,7 +268,7 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
                 <Link to='/login' className='navbar__signin'>
                     Sign in
                 </Link>
-                <Link className='navbar__signup'>
+                <Link to='/signup' className='navbar__signup'>
                     Sign up
                 </Link>
             </div>
@@ -288,7 +288,7 @@ const NavbarMedium = ({ openSearch, setOpenSearch }) => {
     return (
         <div className='navbar__menu-medium'>
             <div className='navbar__menu-left'>
-                <Link className='navbar__signup'>
+                <Link to='/signup' className='navbar__signup'>
                     Sign up
                 </Link>
             </div>
