@@ -13,7 +13,7 @@ const Signup = () => {
       style={{
         position: 'relative',
         background: '#040d21',
-        height: `${height}px`,
+        minHeight: `${height}px`,
         opacity: isReady ? 1 : 0,
         transition: 'opacity 0.5s linear',
         overflow: 'clip',

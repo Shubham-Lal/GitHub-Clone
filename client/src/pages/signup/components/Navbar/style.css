@@ -54,3 +54,9 @@
         margin-top: 0;
     }
 }
+
+@media (min-width: 1012px) {
+    .header__container {
+        padding: 0 16px;
+    }
+}
