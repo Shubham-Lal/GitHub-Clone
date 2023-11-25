@@ -12,7 +12,7 @@ const Navbar = () => {
                     </Link>
                     <div className='signin__container'>
                         <span>Already have an account?</span>
-                        <Link>Sign in →</Link>
+                        <Link to='/login'>Sign in →</Link>
                     </div>
                 </div>
             </div>

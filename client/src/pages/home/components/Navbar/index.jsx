@@ -309,7 +309,7 @@ const NavbarMedium = ({ openSearch, setOpenSearch }) => {
                     style={{
                         height: `${height - 88}px`,
                         opacity: isReady ? 1 : 0,
-                        transition: 'opacity 0.5s linear'
+                        transition: 'opacity 0.1s linear'
                     }}
                 >
                     <div className='sidebar__top'>

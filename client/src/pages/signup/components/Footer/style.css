@@ -1,0 +1,28 @@
+.footer__container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__wrapper {
+    max-width: 654px;
+    margin-bottom: 40px;
+    z-index: 2;
+}
+
+.footer__wrapper p {
+    margin: 24px;
+    color: #8193b2;
+    font-size: 12px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.footer__wrapper a {
+    color: #0969da;
+    font-size: 12px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    cursor: pointer;
+}
