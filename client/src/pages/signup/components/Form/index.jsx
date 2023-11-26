@@ -52,8 +52,7 @@ const Form = () => {
                                         <input id='email' className='input__tag' autoFocus={true} />
                                     </div>
                                     <button
-                                        className='continue__button'
-                                        style={{ visibility: inputStage === 1 ? 'visible' : 'hidden' }}
+                                        className={`continue__button ${inputStage !== 1 && "hidden"}`}
                                         onClick={() => setInputStage(2)}
                                     >
                                         Continue
@@ -71,8 +70,7 @@ const Form = () => {
                                             <input id='password' className='input__tag' autoFocus={true} />
                                         </div>
                                         <button
-                                            className='continue__button'
-                                            style={{ visibility: inputStage === 2 ? 'visible' : 'hidden' }}
+                                            className={`continue__button ${inputStage !== 2 && "hidden"}`}
                                             onClick={() => setInputStage(3)}
                                         >
                                             Continue
@@ -91,8 +89,7 @@ const Form = () => {
                                             <input id='username' className='input__tag' autoFocus={true} />
                                         </div>
                                         <button
-                                            className='continue__button'
-                                            style={{ visibility: inputStage === 3 ? 'visible' : 'hidden' }}
+                                            className={`continue__button ${inputStage !== 3 && "hidden"}`}
                                             onClick={() => setInputStage(4)}
                                         >
                                             Continue

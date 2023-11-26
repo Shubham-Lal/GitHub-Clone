@@ -91,6 +91,10 @@
     cursor: pointer;
 }
 
+.continue__button.hidden {
+    display: none;
+}
+
 @media (min-width: 544px) {
     .input__box-container {
         flex-direction: row;
@@ -99,5 +103,10 @@
     .continue__button {
         margin-top: 0;
         width: auto;
+    }
+
+    .continue__button.hidden {
+        display: block;
+        visibility: hidden;
     }
 }
