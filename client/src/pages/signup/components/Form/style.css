@@ -33,14 +33,10 @@
     color: white !important;
 }
 
-.input__wrapper {
-    margin-top: 26px;
-}
-
-.email__label {
+.input__wrapper label {
     color: #00cfc8;
     font-family: 'Liberation Mono', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
 }
@@ -83,8 +79,9 @@
 .continue__button {
     margin-top: 24px;
     width: 100%;
-    padding: 5px 16px;
-    color: #627597;
+    height: 32px;
+    padding: 0 16px;
+    color: #8c959f;
     background: none;
     border: 1px solid #627597;
     border-radius: 6px;
