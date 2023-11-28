@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import TypeIt from 'typeit-react'
+import Typewriter from 'typewriter-effect'
 import { useValidateInput } from './useValidateInput';
 import Input from './Input';
 import './style.css'
@@ -50,41 +50,26 @@ const Form = () => {
         <div className='signup__form'>
             <div className='form__container'>
                 <div className='form__wrapper'>
-                    <TypeIt style={{ display: 'inline-block', height: '25.5px', marginTop: '1px' }} className='typing__text' options={{
-                        startDelay: 3000,
-                        speed: 25,
-                        afterComplete: (instance) => {
-                            setIsTypingCompleted(true);
-                            instance.destroy();
-                        },
-                        cursor: {
-                            autoPause: false,
-                            animation: {
-                                options: {
-                                    duration: 700,
-                                    easing: "linear",
-                                },
-                                frames: [
-                                    {
-                                        opacity: 1
-                                    },
-                                    {
-                                        opacity: 0
-                                    },
-                                    {
-                                        opacity: 1
-                                    },
-                                ],
-                            }
-                        }
-                    }}>
-                        <span>Welcome to GitHub!</span><br /><span>Let’s begin the adventure</span>
-                    </TypeIt>
+                    <Typewriter
+                        style={{ display: 'inline-block', height: '25.5px', marginTop: '1px' }}
+                        onInit={(typewriter) => {
+                            typewriter
+                                .changeDelay(25)
+                                .pauseFor(3000)
+                                .typeString('Welcome to GitHub!<br />Let’s begin the adventure')
+                                .start()
+                                .callFunction((instance) => {
+                                    setIsTypingCompleted(true);
+                                    instance.elements.cursor.remove();
+                                })
+                        }}
+                    />
+
                     {isTypingCompleted && (
                         <>
-                            <div className='input__wrapper' style={{ marginTop: '27.6px' }}>
-                                <div style={{ display: 'inline-flex', width: '100%', height: '25.5px' }}>
-                                    <label htmlFor='email'>Enter your email*</label>
+                            <div className='input__wrapper' style={{ marginTop: '24px' }}>
+                                <div style={{ display: 'inline-flex', width: '100%', height: '26px', marginBottom: '2px' }}>
+                                    <label className='input-label' htmlFor='email'>Enter your email*</label>
                                 </div>
                                 <div className='input__box-container'>
                                     <div className='input__box-wrapper'>
@@ -120,8 +105,8 @@ const Form = () => {
                                 </div>
                             </div>
                             {showPassword && (
-                                <div className='input__wrapper' style={{ marginTop: '23px' }}>
-                                    <div style={{ display: 'inline-flex', width: '100%', height: '25.5px' }}>
+                                <div className='input__wrapper' style={{ marginTop: '24px' }}>
+                                    <div style={{ display: 'inline-flex', width: '100%', height: '26px', marginBottom: '2px' }}>
                                         <label htmlFor='password'>Create a password*</label>
                                     </div>
                                     <div className='input__box-container'>
@@ -160,7 +145,7 @@ const Form = () => {
                             )}
                             {showUsername && (
                                 <div className='input__wrapper' style={{ marginTop: '24px' }}>
-                                    <div style={{ display: 'inline-flex', width: '100%', height: '25.5px' }}>
+                                    <div style={{ display: 'inline-flex', width: '100%', height: '26px', marginBottom: '4px' }}>
                                         <label htmlFor='username'>Enter a username*</label>
                                     </div>
                                     <div className='input__box-container'>
@@ -198,8 +183,8 @@ const Form = () => {
                                 </div>
                             )}
                             {showNotification && (
-                                <div className='input__wrapper' style={{ marginTop: '23px' }}>
-                                    <div style={{ display: 'inline-flex', width: '100%', marginBottom: '4px' }}>
+                                <div className='input__wrapper' style={{ marginTop: '24px' }}>
+                                    <div style={{ display: 'inline-flex', width: '100%', height: '26px', marginBottom: '3px' }}>
                                         <label>
                                             Email preferences
                                         </label>

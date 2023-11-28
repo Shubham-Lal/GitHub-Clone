@@ -22,15 +22,31 @@
     box-shadow: 0 1px 0 rgba(31, 35, 40, 0.04);
 }
 
-.typing__text span {
+.Typewriter .Typewriter__wrapper {
     color: #8193b2;
     font-family: 'Liberation Mono', sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    padding-right: 2.5px;
 }
 
-.typing__text .ti-cursor {
+.Typewriter .Typewriter__cursor {
     color: white !important;
+    animation: typingEffectBlink .7s infinite;
+}
+
+@keyframes typingEffectBlink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .input__wrapper label {
@@ -62,8 +78,8 @@
 }
 
 .input__tag {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     padding-right: 12px;
     width: 100%;
     background: none;
@@ -88,7 +104,7 @@
 
 .notification-checkbox {
     position: relative;
-    top: -9px;
+    top: -10px;
     z-index: 1;
     width: 14px;
     height: 15px;
@@ -103,6 +119,7 @@
 .checkmark {
     position: absolute;
     top: -7px;
+    left: 0.5px;
     z-index: 0;
     display: none;
     color: white;
