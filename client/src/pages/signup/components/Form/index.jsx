@@ -8,7 +8,6 @@ const Form = () => {
     const { validateEmail, validatePassword, validateUsername } = useValidateInput();
 
     const [isTypingCompleted, setIsTypingCompleted] = useState(false);
-    const [inputStage, setInputStage] = useState(1);
 
     const [timer, setTimer] = useState(null);
     const [showContinue, setShowContinue] = useState(1);
@@ -18,17 +17,22 @@ const Form = () => {
     const [emailProceed, setEmailProceed] = useState(1);
     const [showEmailError, setShowEmailError] = useState(false);
 
+    const [showPassword, setShowPassword] = useState(false);
     const [password, setPassword] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [passwordProceed, setPasswordProceed] = useState(1);
     const [showPasswordError, setShowPasswordError] = useState(false);
 
+    const [showUsername, setShowUsername] = useState(false);
     const [username, setUsername] = useState("");
     const [usernameError, setUsernameError] = useState("");
     const [usernameProceed, setUsernameProceed] = useState(1);
     const [showUsernameError, setShowUsernameError] = useState(false);
 
+    const [showNotification, setShowNotification] = useState(false);
     const [notification, setNotification] = useState("");
+
+    const [showCreateAcc, setShowCreateAcc] = useState(false);
 
     const handleFocus = (id) => {
         if (id === "email") setShowContinue(1);
@@ -92,6 +96,7 @@ const Form = () => {
                                             id="email"
                                             timer={timer}
                                             setTimer={setTimer}
+                                            showContinue={showContinue}
                                             value={email}
                                             setValue={setEmail}
                                             setError={setEmailError}
@@ -105,7 +110,7 @@ const Form = () => {
                                         className={`continue__button ${email && emailProceed === 2 && "proceed"} ${showContinue !== 1 && "hidden"}`}
                                         onClick={() => {
                                             if (email && emailProceed === 2) {
-                                                setInputStage(2);
+                                                setShowPassword(true);
                                                 setShowContinue(2);
                                             }
                                         }}
@@ -114,7 +119,7 @@ const Form = () => {
                                     </button>
                                 </div>
                             </div>
-                            {inputStage !== 1 && (
+                            {showPassword && (
                                 <div className='input__wrapper' style={{ marginTop: '23px' }}>
                                     <div style={{ display: 'inline-flex', width: '100%', height: '25.5px' }}>
                                         <label htmlFor='password'>Create a password*</label>
@@ -129,6 +134,7 @@ const Form = () => {
                                                 id="password"
                                                 timer={timer}
                                                 setTimer={setTimer}
+                                                showContinue={showContinue}
                                                 value={password}
                                                 setValue={setPassword}
                                                 setError={setPasswordError}
@@ -142,7 +148,7 @@ const Form = () => {
                                             className={`continue__button ${password && passwordProceed === 2 && "proceed"} ${showContinue !== 2 && "hidden"}`}
                                             onClick={() => {
                                                 if (password && passwordProceed === 2) {
-                                                    setInputStage(3);
+                                                    setShowUsername(true);
                                                     setShowContinue(3);
                                                 }
                                             }}
@@ -152,7 +158,7 @@ const Form = () => {
                                     </div>
                                 </div>
                             )}
-                            {(inputStage !== 1 && inputStage !== 2) && (
+                            {showUsername && (
                                 <div className='input__wrapper' style={{ marginTop: '24px' }}>
                                     <div style={{ display: 'inline-flex', width: '100%', height: '25.5px' }}>
                                         <label htmlFor='username'>Enter a username*</label>
@@ -167,6 +173,7 @@ const Form = () => {
                                                 id="username"
                                                 timer={timer}
                                                 setTimer={setTimer}
+                                                showContinue={showContinue}
                                                 value={username}
                                                 setValue={setUsername}
                                                 setError={setUsernameError}
@@ -180,7 +187,7 @@ const Form = () => {
                                             className={`continue__button ${username && usernameProceed === 2 && "proceed"} ${showContinue !== 3 && "hidden"}`}
                                             onClick={() => {
                                                 if (username && usernameProceed === 2) {
-                                                    setInputStage(4);
+                                                    setShowNotification(true);
                                                     setShowContinue(4);
                                                 }
                                             }}
@@ -190,7 +197,7 @@ const Form = () => {
                                     </div>
                                 </div>
                             )}
-                            {(inputStage !== 1 && inputStage !== 2 && inputStage !== 3) && (
+                            {showNotification && (
                                 <div className='input__wrapper' style={{ marginTop: '23px' }}>
                                     <div style={{ display: 'inline-flex', width: '100%', marginBottom: '4px' }}>
                                         <label>
@@ -216,7 +223,7 @@ const Form = () => {
                                         <button
                                             className={`continue__button proceed ${showContinue !== 4 && "hidden"}`}
                                             onClick={() => {
-                                                setInputStage(5);
+                                                setShowCreateAcc(true);
                                                 setShowContinue(5);
                                             }}
                                         >
@@ -225,7 +232,7 @@ const Form = () => {
                                     </div>
                                 </div>
                             )}
-                            {inputStage === 5 && (
+                            {showCreateAcc && (
                                 <button className={`create__account ${(email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2) && "success"}`}>
                                     Create account
                                 </button>
