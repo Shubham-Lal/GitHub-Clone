@@ -1,29 +1,46 @@
 import React, { useState } from 'react'
 import TypeIt from 'typeit-react'
+import { useValidateInput } from './useValidateInput';
 import Input from './Input';
 import './style.css'
 
 const Form = () => {
+    const { validateEmail, validatePassword, validateUsername } = useValidateInput();
+
     const [isTypingCompleted, setIsTypingCompleted] = useState(false);
     const [inputStage, setInputStage] = useState(1);
 
     const [timer, setTimer] = useState(null);
+    const [showContinue, setShowContinue] = useState(1);
 
     const [email, setEmail] = useState("");
     const [emailError, setEmailError] = useState("");
     const [emailProceed, setEmailProceed] = useState(1);
+    const [showEmailError, setShowEmailError] = useState(false);
 
     const [password, setPassword] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [passwordProceed, setPasswordProceed] = useState(1);
+    const [showPasswordError, setShowPasswordError] = useState(false);
 
     const [username, setUsername] = useState("");
     const [usernameError, setUsernameError] = useState("");
     const [usernameProceed, setUsernameProceed] = useState(1);
+    const [showUsernameError, setShowUsernameError] = useState(false);
 
     const [notification, setNotification] = useState("");
-    const [notificationError, setNotificationError] = useState("");
-    const [notificationProceed, setNotificationProceed] = useState(1);
+
+    const handleFocus = (id) => {
+        if (id === "email") setShowContinue(1);
+        else if (id === "password") setShowContinue(2);
+        else if (id === "username") setShowContinue(3);
+    }
+
+    const handleBlur = (id) => {
+        if (id === 'email') validateEmail(email, setEmailProceed, setEmailError, setShowEmailError);
+        else if (id === 'password') validatePassword(password, setPasswordProceed, setPasswordError, setShowPasswordError);
+        else if (id === 'username') validateUsername(username, setUsernameProceed, setUsernameError, setShowUsernameError);
+    }
 
     return (
         <div className='signup__form'>
@@ -61,15 +78,15 @@ const Form = () => {
                     </TypeIt>
                     {isTypingCompleted && (
                         <>
-                            <div className='input__wrapper' style={{ marginTop: '26px' }}>
+                            <div className='input__wrapper' style={{ marginTop: '27.6px' }}>
                                 <div style={{ display: 'inline-flex', width: '100%', height: '25.5px' }}>
                                     <label htmlFor='email'>Enter your email*</label>
                                 </div>
                                 <div className='input__box-container'>
                                     <div className='input__box-wrapper'>
-                                        {emailProceed === 0 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✕</span>
-                                            : emailProceed === 2 && inputStage !== 1 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
-                                                : <span className='right__arrow'>→</span>
+                                        {showContinue === 1 ? <span className='right__arrow'>→</span>
+                                            : showEmailError ? <span className='right__arrow' style={{ color: '#d1242f' }}>✕</span>
+                                                : <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
                                         }
                                         <Input
                                             id="email"
@@ -79,12 +96,18 @@ const Form = () => {
                                             setValue={setEmail}
                                             setError={setEmailError}
                                             setProceed={setEmailProceed}
+                                            setShowError={setShowEmailError}
+                                            handleFocus={handleFocus}
+                                            handleBlur={handleBlur}
                                         />
                                     </div>
                                     <button
-                                        className={`continue__button ${email && emailProceed === 2 && "proceed"} ${inputStage !== 1 && "hidden"}`}
+                                        className={`continue__button ${email && emailProceed === 2 && "proceed"} ${showContinue !== 1 && "hidden"}`}
                                         onClick={() => {
-                                            if (email && emailProceed === 2) setInputStage(2);
+                                            if (email && emailProceed === 2) {
+                                                setInputStage(2);
+                                                setShowContinue(2);
+                                            }
                                         }}
                                     >
                                         Continue
@@ -98,9 +121,9 @@ const Form = () => {
                                     </div>
                                     <div className='input__box-container'>
                                         <div className='input__box-wrapper'>
-                                            {passwordProceed === 0 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✕</span>
-                                                : passwordProceed === 2 && inputStage !== 2 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
-                                                    : <span className='right__arrow'>→</span>
+                                            {showContinue === 2 ? <span className='right__arrow'>→</span>
+                                                : showPasswordError ? <span className='right__arrow' style={{ color: '#d1242f' }}>✕</span>
+                                                    : <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
                                             }
                                             <Input
                                                 id="password"
@@ -110,12 +133,18 @@ const Form = () => {
                                                 setValue={setPassword}
                                                 setError={setPasswordError}
                                                 setProceed={setPasswordProceed}
+                                                setShowError={setShowPasswordError}
+                                                handleFocus={handleFocus}
+                                                handleBlur={handleBlur}
                                             />
                                         </div>
                                         <button
-                                            className={`continue__button ${password && passwordProceed === 2 && "proceed"} ${inputStage !== 2 && "hidden"}`}
+                                            className={`continue__button ${password && passwordProceed === 2 && "proceed"} ${showContinue !== 2 && "hidden"}`}
                                             onClick={() => {
-                                                if (password && passwordProceed === 2) setInputStage(3);
+                                                if (password && passwordProceed === 2) {
+                                                    setInputStage(3);
+                                                    setShowContinue(3);
+                                                }
                                             }}
                                         >
                                             Continue
@@ -130,9 +159,9 @@ const Form = () => {
                                     </div>
                                     <div className='input__box-container'>
                                         <div className='input__box-wrapper'>
-                                            {usernameProceed === 0 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✕</span>
-                                                : usernameProceed === 2 && inputStage !== 3 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
-                                                    : <span className='right__arrow'>→</span>
+                                            {showContinue === 3 ? <span className='right__arrow'>→</span>
+                                                : showUsernameError ? <span className='right__arrow' style={{ color: '#d1242f' }}>✕</span>
+                                                    : <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
                                             }
                                             <Input
                                                 id="username"
@@ -142,12 +171,18 @@ const Form = () => {
                                                 setValue={setUsername}
                                                 setError={setUsernameError}
                                                 setProceed={setUsernameProceed}
+                                                setShowError={setShowUsernameError}
+                                                handleFocus={handleFocus}
+                                                handleBlur={handleBlur}
                                             />
                                         </div>
                                         <button
-                                            className={`continue__button ${username && usernameProceed === 2 && "proceed"} ${inputStage !== 3 && "hidden"}`}
+                                            className={`continue__button ${username && usernameProceed === 2 && "proceed"} ${showContinue !== 3 && "hidden"}`}
                                             onClick={() => {
-                                                if (username && usernameProceed === 2) setInputStage(4);
+                                                if (username && usernameProceed === 2) {
+                                                    setInputStage(4);
+                                                    setShowContinue(4);
+                                                }
                                             }}
                                         >
                                             Continue
@@ -157,32 +192,32 @@ const Form = () => {
                             )}
                             {(inputStage !== 1 && inputStage !== 2 && inputStage !== 3) && (
                                 <div className='input__wrapper' style={{ marginTop: '23px' }}>
-                                    <div style={{ display: 'inline-flex', width: '100%', minHeight: '76.5px', marginBottom: '8px' }}>
-                                        <label htmlFor='notification'>
-                                            Would you like to receive product updates and announcements via email?<br />
-                                            Type "y" for yes or "n" for no
+                                    <div style={{ display: 'inline-flex', width: '100%', marginBottom: '4px' }}>
+                                        <label>
+                                            Email preferences
                                         </label>
                                     </div>
                                     <div className='input__box-container'>
-                                        <div className='input__box-wrapper'>
-                                            {notificationProceed === 0 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✕</span>
-                                                : notificationProceed === 2 && inputStage !== 4 ? <span className='right__arrow' style={{ color: '#20bb3d' }}>✓</span>
-                                                    : <span className='right__arrow'>→</span>
-                                            }
-                                            <Input
-                                                id="notification"
-                                                timer={timer}
-                                                setTimer={setTimer}
-                                                value={notification}
-                                                setValue={setNotification}
-                                                setError={setNotificationError}
-                                                setProceed={setNotificationProceed}
-                                            />
+                                        <div className='notification__container'>
+                                            <div style={{ position: 'relative' }}>
+                                                <input
+                                                    id='notification'
+                                                    className='notification-checkbox'
+                                                    type='checkbox'
+                                                    checked={notification}
+                                                    onChange={() => setNotification(!notification)}
+                                                />
+                                                <div className={`checkmark ${notification && "checked"}`}>✓</div>
+                                            </div>
+                                            <label htmlFor='notification' className='notification-label'>
+                                                Receive occasional product updates and announcements.
+                                            </label>
                                         </div>
                                         <button
-                                            className={`continue__button ${notification && notificationProceed === 2 && "proceed"} ${inputStage !== 4 && "hidden"}`}
+                                            className={`continue__button proceed ${showContinue !== 4 && "hidden"}`}
                                             onClick={() => {
-                                                if (notification && notificationProceed === 2) setInputStage(5);
+                                                setInputStage(5);
+                                                setShowContinue(5);
                                             }}
                                         >
                                             Continue
@@ -191,16 +226,18 @@ const Form = () => {
                                 </div>
                             )}
                             {inputStage === 5 && (
-                                <button className='create__account'>Create account</button>
+                                <button className={`create__account ${(email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2) && "success"}`}>
+                                    Create account
+                                </button>
                             )}
                         </>
                     )}
                 </div>
                 <div className="hint__wrapper">
-                    {inputStage === 1 && email && emailError && (
+                    {showContinue === 1 && email && emailError && (
                         <p className='error-message'>{emailError}</p>
                     )}
-                    {inputStage === 2 && password && passwordError && (
+                    {showContinue === 2 && password && passwordError && (
                         <>
                             <div
                                 className='error-indicator'>
@@ -224,14 +261,9 @@ const Form = () => {
                             </p>
                         </>
                     )}
-                    {inputStage === 3 && username && usernameError && (
+                    {showContinue === 3 && username && usernameError && (
                         <p className='error-message'>
                             {usernameError === "Available" ? `${username} is available.` : `Username ${username} is not available.`}
-                        </p>
-                    )}
-                    {inputStage === 4 && notification && notificationError && (
-                        <p className='error-message'>
-                            {notificationError}
                         </p>
                     )}
                 </div>

@@ -62,6 +62,9 @@
 }
 
 .input__tag {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 12px;
     width: 100%;
     background: none;
     color: white;
@@ -69,11 +72,61 @@
     font-size: 16px;
     line-height: 20px;
     border: 1px solid transparent;
+    border-radius: 6px;
 }
 
 .input__tag:focus,
 .input__tag:focus-visible {
     border-color: #0969da;
+}
+
+.notification__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.notification-checkbox {
+    position: relative;
+    top: -9px;
+    z-index: 1;
+    width: 14px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 2px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: -7px;
+    z-index: 0;
+    display: none;
+    color: white;
+}
+
+.checkmark.checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 15px;
+}
+
+.notification-checkbox:focus:not(:focus-visible) {
+    border: 1px solid #0969da;
+}
+
+.input__wrapper .notification-label {
+    padding-left: 8px;
+    color: white;
+    font-family: 'Liberation Mono', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .continue__button {
@@ -152,11 +205,11 @@
 
 .error-indicator .danger {
     background-color: #ed4e50;
-} 
+}
 
 .error-indicator .warn {
     background-color: #ffd33d;
-} 
+}
 
 .error-indicator .success {
     background-color: #1f883d;
@@ -169,9 +222,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #20bb3d;
+    color: #8c959f;
     background: none;
-    border: 1px solid #20bb3d;
+    border: 1px solid #627597;
     border-radius: 6px;
     font-family: sans-serif;
     font-size: 14px;
@@ -179,9 +232,19 @@
     cursor: pointer;
 }
 
+.create__account.success {
+    color: #20bb3d;
+    background: none;
+    border: 1px solid #20bb3d;
+}
+
 @media (min-width: 544px) {
     .input__box-container {
         flex-direction: row;
+    }
+
+    .input__box-wrapper {
+        margin-right: 8px;
     }
 
     .continue__button {
