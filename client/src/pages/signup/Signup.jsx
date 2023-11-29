@@ -22,7 +22,7 @@ const Signup = () => {
       }}
     >
       <Background />
-      <Navbar />
+      <Navbar showSignin={true} />
       <Form />
       <Footer />
     </div>

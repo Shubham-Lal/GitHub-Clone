@@ -1,0 +1,119 @@
+.otp__container {
+    padding-top: 128px;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+}
+
+.otp__wrapper {
+    max-width: 600px;
+    width: 100%;
+    z-index: 2;
+}
+
+.otp__input-container {
+    padding: 24px;
+    background: #0c162d;
+    border: 1px solid #202637;
+    border-radius: 6px;
+}
+
+.otp__input-container p {
+    font-family: 'Liberation Mono', sans-serif;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.otp__container p .email {
+    font-family: inherit;
+    color: #0dbc79;
+}
+
+.otp__container p:nth-child(3) {
+    margin: 16px 0;
+    color: #ea4aaa;
+}
+
+.arrow-right {
+    font-family: inherit;
+    color: #627597;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.arrow-right::after {
+    content: "→";
+}
+
+.otp__container p sup {
+    top: -0.5em;
+    font-family: inherit;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.otp__input-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box {
+    padding: 8px 4px;
+    width: 23.2333px;
+    background-color: #0c162d;
+    border: 1px solid #8B949E;
+    border-radius: 6px;
+    font-size: 22px;
+    font-family: 'Liberation Mono', sans-serif;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+}
+
+.extras {
+    margin: 24px;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    color: #627597;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.resend-otp {
+    background: none;
+    font-family: inherit;
+    color: #0969da;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.update-email {
+    font-family: inherit;
+    color: #0969da;
+    font-size: inherit;
+    line-height: inherit;
+    text-decoration: underline;
+    text-underline-offset: .2rem;
+}
+
+@media (min-width: 544px) {
+    .input-box {
+        padding: 16px;
+        width: 47.2333px;
+    }
+}
+
+@media (min-width: 768px) {
+    .otp__input-container {
+        margin: 24px;
+    }
+
+    .input-box {
+        width: 48.4333px;
+        font-size: 24px;
+    }
+}

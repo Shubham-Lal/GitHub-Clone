@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
 
-const Navbar = () => {
+const Navbar = ({ showSignin }) => {
     return (
         <header id='header-signup'>
             <div className='header__container'>
@@ -10,10 +10,12 @@ const Navbar = () => {
                     <Link to='/' style={{ display: 'inline-block', width: '32px', height: '32px', textDecoration: 'none' }}>
                         <img src='/images/logo.svg' alt='Logo' />
                     </Link>
-                    <div className='signin__container'>
-                        <span>Already have an account?</span>
-                        <Link to='/login'>Sign in →</Link>
-                    </div>
+                    {showSignin && (
+                        <div className='signin__container'>
+                            <span>Already have an account?</span>
+                            <Link to='/login'>Sign in →</Link>
+                        </div>
+                    )}
                 </div>
             </div>
         </header>

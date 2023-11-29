@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import Typewriter from 'typewriter-effect'
+import { useNavigate } from 'react-router-dom';
 import { useValidateInput } from './useValidateInput';
+import Typewriter from 'typewriter-effect'
 import Input from './Input';
 import './style.css'
 
 const Form = () => {
+    const navigate = useNavigate();
+
     const { validateEmail, validatePassword, validateUsername } = useValidateInput();
 
     const [isTypingCompleted, setIsTypingCompleted] = useState(false);
@@ -218,7 +221,14 @@ const Form = () => {
                                 </div>
                             )}
                             {showCreateAcc && (
-                                <button className={`create__account ${(email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2) && "success"}`}>
+                                <button
+                                    className={`create__account ${(email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2) && "success"}`}
+                                    onClick={() => {
+                                        if ((email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2)) {
+                                            navigate('/account_verifications');
+                                        }
+                                    }}
+                                >
                                     Create account
                                 </button>
                             )}
