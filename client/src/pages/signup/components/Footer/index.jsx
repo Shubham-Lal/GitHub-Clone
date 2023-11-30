@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
 
-const Footer = () => {
+export const SignupFooter = () => {
     return (
         <footer className='footer__container'>
             <div className='footer__wrapper'>
@@ -16,4 +16,16 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export const WelcomeFooter = () => {
+    return (
+        <div className='welcome__footer-container'>
+            <div className='welcome__footer-wrapper'>
+                <div style={{ paddingTop: '40px', margin: '40px 24px' }}>
+                    <Link to='/'>
+                        Skip personalization
+                    </Link>
+                </div>
+            </div>
+        </div>
+    )
+}

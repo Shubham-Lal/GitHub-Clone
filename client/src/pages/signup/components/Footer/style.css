@@ -26,3 +26,27 @@
     text-underline-offset: 0.2rem;
     cursor: pointer;
 }
+
+.welcome__footer-container {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome__footer-wrapper {
+    max-width: 654px;
+    margin-bottom: 40px;
+}
+
+.welcome__footer-wrapper a {
+    color: #8193b2;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 400;
+    font-feature-settings: unset;
+}
+
+.welcome__footer-wrapper a:hover {
+    text-decoration: underline;
+}

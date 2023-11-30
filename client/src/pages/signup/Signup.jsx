@@ -3,7 +3,7 @@ import useWindowHeight from '../../hooks/useWindowHeight'
 import Background from '../../components/Background';
 import BasicNavbar from '../../components/Navbar/BasicNavbar';
 import Form from './components/Form';
-import Footer from './components/Footer';
+import { SignupFooter } from './components/Footer';
 
 const Signup = () => {
   const { height, isReady } = useWindowHeight();
@@ -24,7 +24,7 @@ const Signup = () => {
       <Background />
       <BasicNavbar showSignin={true} />
       <Form />
-      <Footer />
+      <SignupFooter />
     </div>
   )
 }
