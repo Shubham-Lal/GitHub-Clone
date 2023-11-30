@@ -2,9 +2,8 @@ import React from 'react'
 import useWindowHeight from '../../hooks/useWindowHeight';
 import Background from '../../components/Background';
 import BasicNavbar from '../../components/Navbar/BasicNavbar';
-import OTP from './components/OTP';
 
-const Verification = () => {
+const Welcome = () => {
     const { height, isReady } = useWindowHeight();
 
     return (
@@ -22,9 +21,8 @@ const Verification = () => {
         >
             <Background />
             <BasicNavbar showSignin={false} />
-            <OTP />
         </div>
     )
 }
 
-export default Verification
+export default Welcome

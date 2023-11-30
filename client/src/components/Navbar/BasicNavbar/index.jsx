@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
 
-const Navbar = ({ showSignin }) => {
+const BasicNavbar = ({ showSignin }) => {
     return (
         <header id='header-signup'>
             <div className='header__container'>
@@ -22,4 +22,4 @@ const Navbar = ({ showSignin }) => {
     )
 }
 
-export default Navbar
+export default BasicNavbar

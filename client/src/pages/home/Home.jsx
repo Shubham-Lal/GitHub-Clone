@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import LinksNavbar from '../../components/Navbar/LinksNavbar';
 import Campaign from './components/Campaign';
 import Footer from './components/Footer';
 
 const Home = () => {
     return (
         <>
-            <Navbar />
+            <LinksNavbar />
             <main style={{ background: '#0d1117', overflowX: 'clip' }}>
                 <Campaign />
             </main>

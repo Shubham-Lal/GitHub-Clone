@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import useWindowHeight from '../../../../hooks/useWindowHeight'
+import useWindowHeight from '../../../hooks/useWindowHeight'
 import './style.css'
 
-const Navbar = () => {
+const LinksNavbar = () => {
     const [openSearch, setOpenSearch] = useState(false);
 
 
@@ -547,4 +547,4 @@ const NavbarMedium = ({ openSearch, setOpenSearch }) => {
     )
 }
 
-export default Navbar
+export default LinksNavbar

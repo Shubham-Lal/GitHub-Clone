@@ -1,7 +1,7 @@
 import React from 'react'
 import useWindowHeight from '../../hooks/useWindowHeight'
-import Background from './components/Background';
-import Navbar from './components/Navbar'
+import Background from '../../components/Background';
+import BasicNavbar from '../../components/Navbar/BasicNavbar';
 import Form from './components/Form';
 import Footer from './components/Footer';
 
@@ -22,7 +22,7 @@ const Signup = () => {
       }}
     >
       <Background />
-      <Navbar showSignin={true} />
+      <BasicNavbar showSignin={true} />
       <Form />
       <Footer />
     </div>

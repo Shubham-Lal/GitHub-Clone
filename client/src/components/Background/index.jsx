@@ -1,5 +1,5 @@
 import React from 'react'
-import Images from '../../../../data/Images'
+import Images from '../../data/Images'
 import './style.css'
 
 const Background = () => {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './style.css'
 
 const OTP = () => {
-    const [otp, setOtp] = useState(Array(9).fill(''));
+    const [otp, setOtp] = useState(Array(8).fill(''));
 
     const handleChange = (target, idx) => {
         setOtp([...otp.slice(0, idx), target.value, ...otp.slice(idx + 1)])
