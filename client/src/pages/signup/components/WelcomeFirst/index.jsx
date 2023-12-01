@@ -12,12 +12,101 @@ const WelcomeFirst = () => {
                         <p>We are glad you're here.</p>
                     </div>
                     <div className='info__container'>
-
+                        <div className='info__wrapper'>
+                            <span className='first-step'>
+                                <span className='info-step' />
+                            </span>
+                            <p className='info-text'>
+                                This will help us guide you to the tools that are best suited for your projects.
+                            </p>
+                            <form>
+                                <div className='info-form'>
+                                    <div className='info-options'>
+                                        <fieldset>
+                                            <legend>How many team members will be working with you?</legend>
+                                            <div className='options'>
+                                                {teamData.map((item, id) => (
+                                                    <div className='option-wrap' key={id}>
+                                                        <input className='radio-box' type="radio" value={item.value} name="team-members" id={item.id} />
+                                                        <span className='radio-text'>
+                                                            <label htmlFor={item.id}>
+                                                                {item.value === '1' ? "Just me" : item.value}
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div className='info-options'>
+                                        <fieldset>
+                                            <legend>Are you a student or teacher?</legend>
+                                            <div className='options'>
+                                                {personalData.map((item, id) => (
+                                                    <div className='option-wrap' key={id}>
+                                                        <input className='radio-box' type="radio" value={item.value} name="personal-info" id={item.id} />
+                                                        <span className='radio-text'>
+                                                            <label htmlFor={item.id}>
+                                                                {item.value}
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <button className='continue-button disabled' disabled={true}>
+                                        Continue
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+
+const teamData = [
+    {
+        id: 'one',
+        value: '1'
+    },
+    {
+        id: 'two-five',
+        value: '2-5'
+    },
+    {
+        id: 'five-ten',
+        value: '5-10'
+    },
+    {
+        id: 'ten-twenty',
+        value: '10-20'
+    },
+    {
+        id: 'twenty-fifty',
+        value: '20-50'
+    },
+    {
+        id: 'above-fifty',
+        value: '50+'
+    },
+]
+const personalData = [
+    {
+        id: 'n/a',
+        value: 'N/A'
+    },
+    {
+        id: 'student',
+        value: 'Student'
+    },
+    {
+        id: 'teacher',
+        value: 'Teacher'
+    }
+]
 
 export default WelcomeFirst
