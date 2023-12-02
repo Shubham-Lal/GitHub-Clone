@@ -27,13 +27,13 @@
     cursor: pointer;
 }
 
-.welcome__footer-container {
+.join__footer-container {
     z-index: 2;
     display: flex;
     justify-content: center;
 }
 
-.welcome__footer-wrapper {
+.join__footer-wrapper {
     max-width: 654px;
     margin-bottom: 40px;
 }

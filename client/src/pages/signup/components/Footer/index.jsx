@@ -16,10 +16,10 @@ export const SignupFooter = () => {
     )
 }
 
-export const WelcomeFooter = () => {
+export const JoinFooter = () => {
     return (
-        <div className='welcome__footer-container'>
-            <div className='welcome__footer-wrapper'>
+        <div className='join__footer-container'>
+            <div className='join__footer-wrapper'>
                 <div className='skip-link'>
                     <Link to='/'>
                         Skip personalization

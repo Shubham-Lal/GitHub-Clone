@@ -2,8 +2,8 @@ import React from 'react'
 import useWindowHeight from '../../hooks/useWindowHeight';
 import Background from '../../components/Background';
 import BasicNavbar from '../../components/Navbar/BasicNavbar';
-import WelcomeFirst from './components/WelcomeFirst';
-import { WelcomeFooter } from './components/Footer';
+import JoinFirst from './components/Join/JoinFirst';
+import { JoinFooter } from './components/Footer';
 
 const Welcome = () => {
     const { height, isReady } = useWindowHeight();
@@ -23,8 +23,8 @@ const Welcome = () => {
         >
             <Background />
             <BasicNavbar showSignin={false} />
-            <WelcomeFirst />
-            <WelcomeFooter />
+            <JoinFirst />
+            <JoinFooter />
         </div>
     )
 }

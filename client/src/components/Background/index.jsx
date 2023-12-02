@@ -1,5 +1,4 @@
 import React from 'react'
-import Images from '../../data/Images'
 import './style.css'
 
 const Background = () => {
@@ -7,7 +6,7 @@ const Background = () => {
         <>
             <img
                 className='glow-image'
-                src={Images['Glow']}
+                src='/images/glow.svg'
                 alt='Background'
             />
             <div className='stars__container'>
