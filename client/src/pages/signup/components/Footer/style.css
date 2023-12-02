@@ -38,15 +38,21 @@
     margin-bottom: 40px;
 }
 
-.welcome__footer-wrapper a {
+.skip-link {
+    padding-top: 39.5px;
+    margin: 40px 24px;
+}
+
+.skip-link a {
     color: #8193b2;
     font-size: 16px;
     line-height: 24px;
     font-family: 'Mona Sans', sans-serif;
     font-weight: 400;
+    letter-spacing: 0.2px;
     font-feature-settings: unset;
 }
 
-.welcome__footer-wrapper a:hover {
+.skip-link a:hover {
     text-decoration: underline;
 }

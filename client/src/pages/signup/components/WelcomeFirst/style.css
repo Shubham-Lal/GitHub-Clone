@@ -41,8 +41,8 @@
 .top__container p {
     margin-bottom: 40px;
     font-family: inherit;
-    font-size: 20px !important;
-    line-height: 28px !important;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 400;
     color: #8193b2;
     letter-spacing: 0.35px;
@@ -192,6 +192,10 @@ legend {
         padding: 0 40px;
     }
 
+    .info__wrapper {
+        padding: 32px;
+    }
+
     .top__container svg {
         margin-bottom: 15px;
     }
@@ -201,6 +205,11 @@ legend {
     .welcome-box {
         margin-right: -24px;
         margin-left: -24px;
+    }
+
+    .top__container {
+        padding-right: 24px;
+        padding-left: 24px;
     }
 
     .top__container svg {
@@ -213,6 +222,11 @@ legend {
         line-height: 52px;
         letter-spacing: -1.1px;
     }
+
+    .info__container {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
 }
 
 @media (min-width: 1012px) {
@@ -222,5 +236,34 @@ legend {
 
     .welcome-box {
         display: flex;
+    }
+
+    .top__container {
+        width: 50%;
+    }
+
+    .top__container h1 {
+        font-size: 64px;
+        line-height: 67px;
+        letter-spacing: -1.4px;
+    }
+
+    .top__container p {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .info__container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .top__container {
+        width: 58.33333331%;
+    }
+
+    .info__container {
+        width: 41.66666665%;
     }
 }

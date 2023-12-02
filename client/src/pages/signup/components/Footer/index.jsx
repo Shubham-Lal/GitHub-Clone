@@ -20,7 +20,7 @@ export const WelcomeFooter = () => {
     return (
         <div className='welcome__footer-container'>
             <div className='welcome__footer-wrapper'>
-                <div style={{ paddingTop: '40px', margin: '40px 24px' }}>
+                <div className='skip-link'>
                     <Link to='/'>
                         Skip personalization
                     </Link>
