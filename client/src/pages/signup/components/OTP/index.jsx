@@ -1,22 +1,34 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './style.css'
 
 const OTP = () => {
+    const navigate = useNavigate();
+
     const [otp, setOtp] = useState(Array(8).fill(''));
 
     const handleChange = (target, idx) => {
-        setOtp([...otp.slice(0, idx), target.value, ...otp.slice(idx + 1)])
-        const nextSibling = target.nextElementSibling
+        const updatedOtp = [...otp.slice(0, idx), target.value, ...otp.slice(idx + 1)];
+        setOtp(updatedOtp);
+        handleSubmitOTP(updatedOtp);
+        const nextSibling = target.nextElementSibling;
         if (nextSibling && target.value) {
-            nextSibling.focus()
+            nextSibling.focus();
         }
     };
+
+    const handleSubmitOTP = (otp) => {
+        if (otp.join('').length === 8) {
+            console.log('OTP:', otp.join(''));
+            navigate('/join/welcome');
+        }
+    };
+
     const handleKeyDown = (e, idx) => {
         if (e.key === 'Backspace' && !otp[idx]) {
-            const prevSibling = e.target.previousElementSibling
+            const prevSibling = e.target.previousElementSibling;
             if (prevSibling) {
-                prevSibling.focus()
+                prevSibling.focus();
             }
         }
     };

@@ -2,7 +2,7 @@ import React from 'react'
 import Background from '../../components/Background';
 import BasicNavbar from '../../components/Navbar/BasicNavbar';
 import Form from './components/Form';
-import { SignupFooter } from './components/Footer';
+import SignupFooter from './components/Footer';
 
 const Signup = () => {
   return (

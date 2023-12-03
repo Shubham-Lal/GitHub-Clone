@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import useWindowHeight from '../../../hooks/useWindowHeight'
 import './style.css'
 
 const LinksNavbar = () => {
     const [openSearch, setOpenSearch] = useState(false);
-
-
     const [searchInput, setSearchInput] = useState("");
 
     return (
@@ -277,8 +274,6 @@ const NavbarLarge = ({ openSearch, setOpenSearch }) => {
 }
 
 const NavbarMedium = ({ openSearch, setOpenSearch }) => {
-    const { height, isReady } = useWindowHeight();
-
     const [openSidebar, setOpenSidebar] = useState(false);
 
     const [showProduct, setShowProduct] = useState(false);
@@ -304,14 +299,7 @@ const NavbarMedium = ({ openSearch, setOpenSearch }) => {
             </div>
 
             {openSidebar && (
-                <div
-                    className='sidebar__container'
-                    style={{
-                        height: `${height - 88}px`,
-                        opacity: isReady ? 1 : 0,
-                        transition: 'opacity 0.1s linear'
-                    }}
-                >
+                <div className='sidebar__container'>
                     <div className='sidebar__top'>
                         <ul className='sidebar__top-wrapper'>
                             <li className='sidebar__top-link' onClick={() => {

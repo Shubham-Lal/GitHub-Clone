@@ -1,0 +1,29 @@
+.join__footer-container {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.join__footer-wrapper {
+    max-width: 654px;
+    margin-bottom: 40px;
+}
+
+.skip-link {
+    padding-top: 39.5px;
+    margin: 40px 24px;
+}
+
+.skip-link a {
+    color: #8193b2;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Mona Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    font-feature-settings: unset;
+}
+
+.skip-link a:hover {
+    text-decoration: underline;
+}

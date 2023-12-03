@@ -49,6 +49,13 @@ const Form = () => {
         else if (id === 'username') validateUsername(username, setUsernameProceed, setUsernameError, setShowUsernameError);
     }
 
+    const handleCreateAccount = () => {
+        if ((email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2)) {
+            navigate('/account_verifications');
+        }
+        else return;
+    }
+
     return (
         <div className='signup__form'>
             <div className='form__container'>
@@ -223,11 +230,7 @@ const Form = () => {
                             {showCreateAcc && (
                                 <button
                                     className={`create__account ${(email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2) && "success"}`}
-                                    onClick={() => {
-                                        if ((email && emailProceed === 2) && (password && passwordProceed === 2) && (username && usernameProceed === 2)) {
-                                            navigate('/account_verifications');
-                                        }
-                                    }}
+                                    onClick={handleCreateAccount}
                                 >
                                     Create account
                                 </button>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './style.css'
 
-export const SignupFooter = () => {
+const SignupFooter = () => {
     return (
         <footer className='footer__container'>
             <div className='footer__wrapper'>
@@ -16,16 +16,4 @@ export const SignupFooter = () => {
     )
 }
 
-export const JoinFooter = () => {
-    return (
-        <div className='join__footer-container'>
-            <div className='join__footer-wrapper'>
-                <div className='skip-link'>
-                    <Link to='/'>
-                        Skip personalization
-                    </Link>
-                </div>
-            </div>
-        </div>
-    )
-}
+export default SignupFooter

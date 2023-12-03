@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './style.css'
 
 const JoinFirst = () => {
+    const navigate = useNavigate();
+
+    const [selectedTeam, setSelectedTeam] = useState(null);
+    const [selectedRole, setSelectedRole] = useState(null);
+
+    const handleTeamChange = (event) => {
+        setSelectedTeam(event.target.value);
+    }
+
+    const handleRoleChange = (event) => {
+        setSelectedRole(event.target.value);
+    }
+
+    const handleSubmitWelcome = (e) => {
+        e.preventDefault();
+
+        navigate('/join/recommended_plan');
+    }
+
     return (
         <div className='welcome__container'>
             <div className='welcome__wrapper'>
@@ -19,7 +39,7 @@ const JoinFirst = () => {
                             <p className='info-text'>
                                 This will help us guide you to the tools that are best suited for your projects.
                             </p>
-                            <form>
+                            <form onSubmit={handleSubmitWelcome}>
                                 <div className='info-form'>
                                     <div className='info-options'>
                                         <fieldset>
@@ -27,7 +47,14 @@ const JoinFirst = () => {
                                             <div className='options'>
                                                 {teamData.map((item, id) => (
                                                     <div className='option-wrap' key={id}>
-                                                        <input className='radio-box' type="radio" value={item.value} name="team-members" id={item.id} />
+                                                        {/* <input className='radio-box' type="radio" value={item.value} name="team-members" id={item.id} /> */}
+                                                        <input
+                                                            className='radio-box'
+                                                            type="radio"
+                                                            value={item.value}
+                                                            name="team-members"
+                                                            id={item.id}
+                                                            onChange={handleTeamChange} />
                                                         <span className='radio-text'>
                                                             <label htmlFor={item.id}>
                                                                 {item.value === '1' ? "Just me" : item.value}
@@ -44,7 +71,14 @@ const JoinFirst = () => {
                                             <div className='options'>
                                                 {personalData.map((item, id) => (
                                                     <div className='option-wrap' key={id}>
-                                                        <input className='radio-box' type="radio" value={item.value} name="personal-info" id={item.id} />
+                                                        {/* <input className='radio-box' type="radio" value={item.value} name="personal-info" id={item.id} /> */}
+                                                        <input
+                                                            className='radio-box'
+                                                            type="radio"
+                                                            value={item.value}
+                                                            name="personal-info"
+                                                            id={item.id}
+                                                            onChange={handleRoleChange} />
                                                         <span className='radio-text'>
                                                             <label htmlFor={item.id}>
                                                                 {item.value}
@@ -55,7 +89,11 @@ const JoinFirst = () => {
                                             </div>
                                         </fieldset>
                                     </div>
-                                    <button className='continue-button disabled' disabled={true}>
+                                    <button
+                                        type="submit"
+                                        className={`continue-button ${selectedTeam && selectedRole ? '' : 'disabled'}`}
+                                        disabled={!selectedTeam || !selectedRole}
+                                    >
                                         Continue
                                     </button>
                                 </div>
