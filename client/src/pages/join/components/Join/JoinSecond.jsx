@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.css'
 
-const JoinSecond = () => {
+const JoinSecond = ({ setTab }) => {
     const [checkedItems, setCheckedItems] = useState([]);
     const handleCheck = (e) => {
         if (e.target.checked) {
@@ -12,9 +12,9 @@ const JoinSecond = () => {
     };
 
     return (
-        <div className='welcome__container'>
-            <div className='welcome__wrapper'>
-                <div className='welcome-box-second'>
+        <div className='join__container'>
+            <div className='join__wrapper'>
+                <div className='join-box-second'>
                     <div className='top__container second'>
                         <img src='/images/join-second.svg' />
                         <h1>The tools you need to build what you want.</h1>
@@ -71,7 +71,7 @@ const JoinSecond = () => {
                                     </div>
                                 </label>
                             ))}
-                            <button className='continue-button'>
+                            <button className='continue-button' onClick={() => setTab(1)}>
                                 Continue
                             </button>
                         </div>
