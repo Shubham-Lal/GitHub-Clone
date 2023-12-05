@@ -29,10 +29,10 @@
 
 .campaign__wrapper {
     display: flex;
-    padding-top: 16px;
 }
 
 .campaign__left {
+    padding-top: 13px;
     display: flex;
     flex-direction: column;
     width: 8.33333333%;
@@ -74,9 +74,109 @@
 }
 
 .campaign__right {
+    padding-top: 1rem;
     padding-left: 8px;
     margin-top: calc(-1 * 24px);
     width: 91.66666663%;
+}
+
+.right-top-space {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0.45rem;
+    display: block;
+}
+
+.top-word-first {
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 51.5px;
+    letter-spacing: 0.05rem;
+    font-feature-settings: unset;
+    word-break: keep-all;
+    word-wrap: break-word;
+    color: white;
+}
+
+.top-word-first span {
+    font-family: inherit;
+    font-size: 1.2em;
+}
+
+.top-word-second {
+    margin-bottom: 1rem;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #7d8590;
+}
+
+.top-button-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-button-container {
+    width: 100%;
+}
+
+.signup-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-signup-wrapper {
+    margin-bottom: 1rem;
+    flex: auto;
+    width: 100%;
+}
+
+.email-signup-input {
+    width: 100%;
+    height: 3rem;
+    padding: 5px 12px;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #1f2328;
+    vertical-align: middle;
+    background-color: white;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+}
+
+.email-signup-button {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(180deg, rgba(183, 52, 179, 0.15) 0%, rgba(164, 46, 156, 0) 100%), #6e40c9;
+    color: white;
+    display: inline-block;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: .375rem;
+    cursor: pointer;
+    transition: box-shadow .2s, outline .2s ease;
+}
+
+.email-signup-button:hover {
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15), 0 100px 80px rgba(255, 255, 255, 0.02), 0 42px 33px rgba(255, 255, 255, 0.024), 0 22px 18px rgba(255, 255, 255, 0.028), 0 12px 10px rgba(255, 255, 255, 0.034), 0 7px 5px rgba(255, 255, 255, 0.04), 0 3px 2px rgba(255, 255, 255, 0.07);
+}
+
+.top-button-separator {
+    margin-bottom: 1rem;
+    border-top: max(1px, 0.0625rem) solid #30363d;
 }
 
 @media (min-width: 544px) {

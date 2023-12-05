@@ -26,7 +26,26 @@ const Campaign = () => {
                             <Line background='two' />
                         </div>
                         <div className='campaign__right'>
-
+                            <div className='right-top-space' />
+                            <h1 className='top-word-first'>
+                                <span>Let’s build from here</span>
+                            </h1>
+                            <p className='top-word-second'>
+                                The world’s leading AI-powered developer platform.
+                            </p>
+                            <div className='top-button-wrapper'>
+                                <form className='signup-button-container'>
+                                    <div className='signup-button-wrapper'>
+                                        <div className='email-signup-wrapper'>
+                                            <input className='email-signup-input' placeholder='Email address' />
+                                        </div>
+                                        <button type='button' className='email-signup-button'>
+                                            Sign up for GitHub
+                                        </button>
+                                    </div>
+                                </form>
+                                <div className='top-button-separator' />
+                            </div>
                         </div>
                     </div>
                 </div>
