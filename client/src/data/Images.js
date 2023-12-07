@@ -1,10 +1,4 @@
 export default {
-    "3M": "https://github.githubassets.com/assets/3m-0151c2fda0ce.svg",
-    "KPMG": "https://github.githubassets.com/assets/kpmg-c249f20c5173.svg",
-    "Mercedes Benz": "https://github.githubassets.com/assets/mercedes-fcf97d2d6ec4.svg",
-    "SAP": "https://github.githubassets.com/assets/sap-96248a56d312.svg",
-    "P&G": "https://github.githubassets.com/assets/pg-f1f19955c4e4.svg",
-    "Telus": "https://github.githubassets.com/assets/telus-df0c2109df99.svg",
     "Earth": "https://github.githubassets.com/assets/globe-d6f3f4ee645a.jpg",
     "Copilot": "https://github.githubassets.com/assets/footer-copilot-54114bfd1d20.png",
     "Bear": "https://github.githubassets.com/assets/footer-mona-d1c861cd8018.png",
