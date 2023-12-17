@@ -1,27 +1,3 @@
-.campaign__image {
-    position: relative;
-    z-index: 1;
-    max-width: 1280px;
-    height: fit-content;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.campaign__image-medium {
-    width: 100%;
-    height: auto;
-    margin-bottom: calc(-1 * 14px);
-}
-
-.campaign__image-large {
-    display: none;
-    z-index: -1;
-    position: absolute;
-    width: min(1118px, max(100vh, 100vw));
-    left: 67%;
-    height: auto;
-}
-
 .campaign__container {
     max-width: 1280px;
     margin: 0 auto;
@@ -266,14 +242,6 @@
 }
 
 @media (min-width: 544px) {
-    .campaign__image-medium {
-        display: none;
-    }
-
-    .campaign__image-large {
-        display: block;
-    }
-
     .vertical-space {
         margin-bottom: 40px;
     }
