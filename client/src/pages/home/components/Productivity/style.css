@@ -84,6 +84,111 @@
     border-radius: 0.75rem;
 }
 
+.productivity__third {
+    display: flex;
+}
+
+.third__left {
+    width: 8.33333333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third__right {
+    margin-left: 0.5rem;
+    width: 91.66666663%;
+}
+
+.third-first {
+    margin: 2rem -24px;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.third-first-container {
+    margin-bottom: 0.5rem;
+    padding: 1rem 24px;
+    width: 100%;
+}
+
+.third-first-wrapper h2 {
+    margin-bottom: 1rem;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #848d97;
+    text-align: left;
+}
+
+.third-first-wrapper em {
+    font-style: normal;
+    color: white;
+}
+
+.third-first-wrapper a {
+    padding: 0.25rem 0;
+    position: relative;
+    display: inline-block;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.third-first-wrapper a .right-arrow {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    overflow: visible;
+    vertical-align: middle;
+    fill: currentColor;
+    transition: transform .2s;
+    transform: translateX(0);
+}
+
+.third-first-wrapper a .right-arrow path:nth-child(2) {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    transition: stroke-dashoffset .2s;
+}
+
+.third-first-wrapper a:hover .right-arrow path:nth-child(2) {
+    stroke-dashoffset: 20;
+}
+
+.third-first-wrapper a:hover::after {
+    position: absolute;
+    z-index: 2;
+    bottom: -0.15em;
+    left: 0;
+    /* width: calc(100% - 1em); */
+    height: 2px;
+    pointer-events: none;
+    content: "";
+    background-color: white;
+    animation: underline-effect 0.3s ease;
+}
+
+@keyframes underline-effect {
+    0% {
+        /* transform: scaleX(0); */
+        width: calc(100% - 1em);
+    }
+    100% {
+        /* transform: scaleX(100%); */
+        width: calc(100% - 1em);
+    }
+}
+
+.third-second {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+
 @media (min-width: 544px) {
     #productivity {
         margin-top: 0;
