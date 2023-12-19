@@ -7,7 +7,7 @@ const Productivity = () => {
     return (
         <div id='productivity'>
             <div className='productivity__container'>
-                {/* <div className='productivity__first'>
+                <div className='productivity__first'>
                     <div className='first__left'>
                         <div className='left__job'>
                             <img src='/images/productivity/job.svg' />
@@ -25,7 +25,7 @@ const Productivity = () => {
                 </div>
                 <div className='productivity__second'>
                     <img className='first-image' src='/images/productivity/image-1.png' width={2496} height={1302} />
-                </div> */}
+                </div>
                 <div className='productivity__third'>
                     <div className='third__left'>
                         <Line background='four' />
