@@ -36,6 +36,6 @@ jobs:
     run: |
       echo "machine ${{ secrets.FTP_SERVER }} login ${{ secrets.FTP_USERNAME }} password ${{ secrets.FTP_PASSWORD }}" > ~/.netrc
 
-  - name: Upload dist folder
+  - name: Upload contents of dist folder
     run: |
-      lftp -e "mirror --only-newer --parallel=100 -R ./client/dist /github.shubhamlal.in/" ${{ secrets.FTP_SERVER }}
+      lftp -e "mirror --only-newer --parallel=100 -R ./client/dist/ /github.shubhamlal.in/" ${{ secrets.FTP_SERVER }}
