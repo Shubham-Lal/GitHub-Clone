@@ -38,4 +38,4 @@ jobs:
 
   - name: Upload dist folder
     run: |
-      lftp -e "mirror --parallel=100 -R ./client/dist /github.shubhamlal.in/" ${{ secrets.FTP_SERVER }}
+      lftp -e "mirror --only-newer --parallel=100 -R ./client/dist /github.shubhamlal.in/" ${{ secrets.FTP_SERVER }}
