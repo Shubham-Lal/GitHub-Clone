@@ -31,6 +31,11 @@ jobs:
         env:
           GH_CPANEL: ${{ secrets.GH_CPANEL }}
         run: |
+          cd client
           git add .
-          git commit -m "Build for deployment"
-          git push https://${GH_CPANEL}@github.com/Shubham-Lal/GitHub-Clone.git HEAD:main
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Build for deployment"
+            git push https://${GH_CPANEL}@github.com/Shubham-Lal/GitHub-Clone.git HEAD:main
+          else
+            echo "No changes to commit"
+          fi
