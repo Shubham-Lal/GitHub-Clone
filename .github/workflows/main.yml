@@ -19,23 +19,5 @@ jobs:
       - name: Install dependencies and build
         run: |
           cd client
-          npm install
+          npm ci
           npm run build
-          cd ..
-
-      - name: Configure git
-        run: |
-          git config user.email "im.shubhamlal@gmail.com"
-          git config user.name "Shubham Lal"
-
-      - name: Commit and push
-        env:
-          GH_CPANEL: ${{ secrets.GH_CPANEL }}
-        run: |
-          git add client/dist
-          if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Build for deployment"
-            git -c http.extraheader="AUTHORIZATION: bearer ${{ secrets.GH_CPANEL }}" push origin main
-          else
-            echo "No changes to commit"
-          fi
