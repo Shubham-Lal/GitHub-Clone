@@ -8,6 +8,7 @@ const AuthProvider = ({ children }) => {
     const login = () => {
         setIsAuthenticated(true);
     };
+    
     const logout = () => {
         setIsAuthenticated(false);
     };
