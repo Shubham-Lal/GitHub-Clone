@@ -21,7 +21,8 @@ jobs:
           cd client
           npm install
           npm run build
-
+          cd ..
+          
       - name: Configure git
         run: |
           git config user.email "im.shubhamlal@gmail.com"
@@ -31,8 +32,7 @@ jobs:
         env:
           GH_CPANEL: ${{ secrets.GH_CPANEL }}
         run: |
-          cd client
-          git add .
+          git add client/dist
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Build for deployment"
             git push https://${GH_CPANEL}@github.com/Shubham-Lal/GitHub-Clone.git HEAD:main
