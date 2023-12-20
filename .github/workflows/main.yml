@@ -22,6 +22,11 @@ jobs:
           npm install
           npm run build
 
+      - name: Configure git
+        run: |
+          git config user.email "im.shubhamlal@gmail.com"
+          git config user.name "Shubham Lal"
+
       - name: Deploy to cPanel
         run: |
           git add .
