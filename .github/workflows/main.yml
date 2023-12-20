@@ -30,7 +30,7 @@ jobs:
       server: ${{ secrets.FTP_SERVER }}
       username: ${{ secrets.FTP_USERNAME }}
       password: ${{ secrets.FTP_PASSWORD }}
-      local-dir: ./client/dist
+      local-dir: ./client/dist/
       server-dir: /github.shubhamlal.in/
       exclude: |
         **/.git
