@@ -1,5 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home3/shubhaml/github.shubhamlal.in
-    - /bin/cp -R client/dist/* $DEPLOYPATH
