@@ -27,8 +27,10 @@ jobs:
           git config user.email "im.shubhamlal@gmail.com"
           git config user.name "Shubham Lal"
 
-      - name: Deploy to cPanel
+      - name: Commit and push
+        env:
+          GH_CPANEL: ${{ secrets.GH_CPANEL }}
         run: |
           git add .
           git commit -m "Build for deployment"
-          git push
+          git push https://${GH_CPANEL}@github.com/Shubham-Lal/GitHub-Clone.git HEAD:main
