@@ -1,14 +1,14 @@
 # GitHub Clone
 
-__[Live Site](https://my-github.pages.dev)__ | Currently in development mode.
+__[Live Site](https://github.shubhamlal.in)__ | Currently in development mode.
 
 **AVAILABLE ROUTES**
-- [Home/Dashboard page](https://my-github.pages.dev)
-- [Login page](https://my-github.pages.dev/login)
-- [Signup page](https://my-github.pages.dev/signup)
-- [Account Verification page](https://my-github.pages.dev/account_verifications)
-- [Join page I](https://my-github.pages.dev/join/welcome)
-- [Join page II](https://my-github.pages.dev/join/recommended_plan)
+- [Home/Dashboard page](https://github.shubhamlal.in)
+- [Login page](https://github.shubhamlal.in/login)
+- [Signup page](https://github.shubhamlal.in/signup)
+- [Account Verification page](https://github.shubhamlal.in/account_verifications)
+- [Join page I](https://github.shubhamlal.in/join/welcome)
+- [Join page II](https://github.shubhamlal.in/join/recommended_plan)
 
 **SETUP**
 1) In your terminal, navigate to the *client* folder and run the command `npm install`.
