@@ -1,6 +1,7 @@
 .login__container {
     min-height: 100svh;
     background-color: white;
+    overflow-y: auto;
 }
 
 .logo__container {
