@@ -7,7 +7,7 @@ const Login = () => {
   const [passkeyVerify, setPasskeyVerify] = useState(true);
 
   return (
-    <>
+    <div className='login__container'>
       <div className='logo__container'>
         <div className='logo__wrapper'>
           <Link to='/' style={{ display: 'inline-block', width: '48px', height: '48px' }}>
@@ -110,7 +110,7 @@ const Login = () => {
           <li>Contact GitHub Support</li>
         </ul>
       </div>
-    </>
+    </div>
   )
 }
 
