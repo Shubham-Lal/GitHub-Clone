@@ -1,7 +1,5 @@
 # GitHub Clone
 
-__[Live Site](https://github.shubhamlal.in)__ | Currently in development mode.
-
 **AVAILABLE ROUTES**
 - [Home/Dashboard page](https://github.shubhamlal.in)
 - [Login page](https://github.shubhamlal.in/login)
