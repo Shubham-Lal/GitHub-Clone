@@ -1,12 +1,12 @@
 # GitHub Clone
 
 **AVAILABLE ROUTES**
-- [Home/Dashboard page](https://github.shubhamlal.in)
-- [Login page](https://github.shubhamlal.in/login)
-- [Signup page](https://github.shubhamlal.in/signup)
-- [Account Verification page](https://github.shubhamlal.in/account_verifications)
-- [Join page I](https://github.shubhamlal.in/join/welcome)
-- [Join page II](https://github.shubhamlal.in/join/recommended_plan)
+- [Home/Dashboard page](https://clone-github.vercel.app)
+- [Login page](https://clone-github.vercel.app/login)
+- [Signup page](https://clone-github.vercel.app/signup)
+- [Account Verification page](https://clone-github.vercel.app/account_verifications)
+- [Join page I](https://clone-github.vercel.app/welcome)
+- [Join page II](https://clone-github.vercel.app/join/recommended_plan)
 
 **SETUP**
 1) In your terminal, navigate to the *client* folder and run the command `npm install`.
